@@ -2,6 +2,7 @@ var apiUrl = "https://api.punkapi.com/v2/beers?food=";
 
 document.getElementById("foodSubmit").addEventListener("click", getBeerPair);
 document.getElementById("toTop").addEventListener("click", backToTop);
+document.getElementById("foodName").addEventListener("keyup", enterPress);
 
 function getBeerPair() {
   var usersBeer = document.getElementById("foodName").value.trim();
@@ -33,12 +34,20 @@ function getBeerPair() {
     });
 }
 
+function enterPress() {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("foodSubmit").click();
+  }
+}
+
 function backToTop() {
   const x = document.documentElement.scrollTop || document.body.scrollTop;
   if (x > 0) {
     window.requestAnimationFrame(backToTop);
     window.scrollTo(0, x - x / 8);
   }
+
   //   document.body.scrollTop = 0;
   //   document.documentElement.scrollTop = 0;
 }
