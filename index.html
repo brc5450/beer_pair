@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Beer Match</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Beer Pair!</h1>
+    </header>
+
+    <section class="inputSection">
+      <div class="container">
+        <label for="foodName">Enter your food here</label>
+        <br />
+        <input
+          type="search"
+          name="foodName"
+          id="foodName"
+          placeholder="Name of Food"
+        />
+        <br /><br />
+        <input
+          type="button"
+          name="foodSubmit"
+          id="foodSubmit"
+          value="Click for Beer"
+        />
+      </div>
+    </section>
+
+    <section class="inputReturn">
+      <h3 id="apiJsonLength"></h3>
+      <div id="beerApiResponse"></div>
+    </section>
+
+    <footer>
+      <button id="toTop">Back to top</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
